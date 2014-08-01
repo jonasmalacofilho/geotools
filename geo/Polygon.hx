@@ -6,7 +6,7 @@ import haxe.ds.Vector;
 {
     private var data:Vector<Pos>;
     
-	static inline var R = 6371e3;
+    static inline var R = 6371e3;
     static inline var toRad = 0.017453292519943295;
   
     public function new(data)
@@ -29,6 +29,9 @@ import haxe.ds.Vector;
 
     public function area():SquaredMeters
     {
+        // approximate algorithm developed by Chamberlain and Duquette (2007)
+        //    Some algorithms for polygons on a sphere
+        //    http://trs-new.jpl.nasa.gov/dspace/bitstream/2014/41271/1/07-0286.pdf
         var a = 0.;
         for (i in 0...data.length)
         {
