@@ -11,3 +11,5 @@ typedef DayOfWeek = geo.units.DayOfWeek;
 typedef Color = geo.units.Color;
 typedef Radians = geo.units.Radians;
 typedef Degrees = geo.units.Degrees;
+typedef SquaredMeters = geo.units.SquaredMeters;
+
